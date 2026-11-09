@@ -1,0 +1,19 @@
+#include<stdio.h>
+#define ll long long
+
+int main(){
+    ll n, ori, temp, reverse = 0;
+    scanf("%lld", &n);
+    
+    ori = n;
+    while(n != 0){
+        temp = n % 10;
+        reverse = reverse * 10 + temp;
+        n /= 10;
+    }
+    
+    if(ori == reverse) printf("YA\n");
+    else printf("TIDAK\n");
+    
+    return 0;
+}
